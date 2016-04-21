@@ -237,7 +237,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
     document.addEventListener("webkitpointerlockerror", pointerlockerror, false);
     document.addEventListener("mozpointerlockerror", pointerlockerror, false);
     
-    if(!document.hasOwnProperty("pointerLockElement")) {
+    if(!("pointerLockElement" in document)) {
         getter = (function() {
             // These are the functions that match the spec, and should be preferred
             if("webkitPointerLockElement" in document) {
